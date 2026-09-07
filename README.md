@@ -8,6 +8,12 @@ The 17-case integration matrix executes allowed work and attempts out-of-scope r
 
 This is an explicitly added project E: the source career brief only defined A–D. It complements artifact trust with OS enforcement. It is **not** a container escape audit, multi-tenant production boundary, cgroup controller, PID/network namespace implementation or root-adversary defense.
 
+## September 2026 maintenance
+
+Each Unix request now has one monotonic deadline across all recv calls, so a slow peer cannot renew the budget by sending individual bytes. Malformed/truncated/oversized messages reject cleanly; best-effort bounded response writes tolerate a disconnected peer and allow the next policy-checked request. Socket cleanup checks the original inode and socket type before unlinking, preserving a replacement path. The existing actual SO_PEERCRED and kernel confinement campaign remains in place.
+
+[Design, acceptance tests and limits](docs/refresh-20260907.md) · [Current measured results](docs/refresh-results-20260907.md). CI repeats validation on Python 3.12 and 3.14.7.
+
 ## Reproduce
 
 ```bash

@@ -1,0 +1,65 @@
+{
+  "artifact_sha256": {
+    "matrix.json": "1e79c32082ae667456c7f63d450d59d26666c5dcc9dfefb45a3a6b9c381f2670",
+    "policy-example.json": "aaa023b7a490217fc3ca2f230a29dd44891bdccea77e8eef5faf0c9023d3efe2",
+    "probe.disassembly.txt": "248228df06472f4beee1251df99584c1e8a96f7b3eec607c60f34fd29acc7745",
+    "unconfined-controls.json": "2eb6de161e4188a457789a3db1945f3f9c774a9c6b6172f2c07eda3ec95ba5f8",
+    "validation.log": "a6f5a8de0a8f34d16660f6861ffec3d4db3475f40931609d05b8ad374343906a"
+  },
+  "details": {
+    "assumptions": "trusted broker, binaries and policy directory; same-UID hostile host processes/root outside threat model",
+    "boundary": "local same-host UID auth, Landlock ABI3 filesystem rights, syscall allowlist; no container/cgroup/network namespace claim",
+    "cases": 17,
+    "confine_sha256": "a4628561096c584062639dafcab9ff22278b8cb0976f740e3b85056b3dad4998",
+    "focused_tests": 8,
+    "kernel_capabilities": {
+      "arch": "x86_64",
+      "landlock_abi": 8
+    },
+    "limits": {
+      "address_space_mib": 64,
+      "cpu_soft_seconds": 1,
+      "file_bytes": 32768,
+      "open_fds": 32
+    },
+    "maintenance": "2026-09-07",
+    "measurement_run_utc": "2026-09-07T22:43:15Z",
+    "worker_sha256": "3438deea4810531221c6043dd7c1a4d8e617519db920698a86bf4ecc17ac39ae"
+  },
+  "environment": {
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13900K",
+    "kernel": "7.0.0-29-generic",
+    "logical_cpus": 32,
+    "machine": "x86_64",
+    "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]"
+  },
+  "execution": "real local CPU processes; author-operated",
+  "run_utc": "2026-09-07T22:44:43Z",
+  "schema": 1,
+  "source_sha256": {
+    ".github/workflows/ci.yml": "9f0b3acebfda4438c429cd50f211b2269ec5d3fe5b621139b305bff7d71429e9",
+    ".gitignore": "f01f7794de7a21670ab309a8171ce8dc857d1696e6c3340bb451006bf83ff171",
+    "LICENSE": "3c4007918aa9889a47e12beb02f2501829853e731e793779205f2b53443345bc",
+    "Makefile": "c8dd4a03ee0ba22bf6910552f474d214c44e0a31aa117c90a205b00595c8ad85",
+    "README.md": "c8c7c5f60b3db6ce03f0bde8643b62194cdce397b91d51e452135b2180332d9a",
+    "broker.py": "8e4194d785cc2d67981cb28a71860370b5a160515089f9c4d6ee04fb0b1c98e8",
+    "docs/engineering.md": "0f190bebe22dc8ce9ae62f73cf5989329794ee219b559d6c2c9de20e8ecfdf78",
+    "docs/failures/allocation-elided.txt": "fb8c117e3265e0b1e80e3796bb2261c52f6ba3751d14a149807c747abd6b9481",
+    "docs/failures/probe-before.disassembly.txt": "37f915b68e9167e4cfd1b7330106a87895fe96e369b132c632ea59ec2bbd26b8",
+    "docs/interview.md": "d6137e8767985bd75daaea2d38f499da3537f4286708999a994f718d8addf5ab",
+    "docs/market-review-20260907.md": "e95167ce289898ad655faf29685aff07d5b18f62e06465dc6487cfc3778b1153",
+    "docs/refresh-20260907.md": "4c17cbdce5eb71abf2968ae8da33e177ae381fd2626152e130b59cd7de5feb07",
+    "docs/refresh-results-20260907.md": "75839c3976bb5dae39b2efced84adcf6f2e94c5f24a5018db404784317695a8b",
+    "docs/results.md": "e6d66210486d08dae5613b689d121a0246f502f8f5c35344cb679f8b3960e035",
+    "evidence.py": "b22c6611b15e003bf442aa50322ab4bbd1981ea7be50e61971cbdb3fed368c9b",
+    "scripts/validate.py": "dbc11680e463c33472f71e117ff6917882f946658dc0cc11f09c4dde9bd48716",
+    "src/confine.c": "af5cd25a5ec6ef2c464b83695f1233a54530014fe5bcb87a5dcfc46e3e48d74c",
+    "src/probe.c": "71f4f2b276f621f1cc54a493b4adcec8df5de9f2cd8803d7f5792663f0af8365",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_policy.py": "a058ad064629593a2ee54568555d4fa4c657e957a137e95667635f396a7a3ea9",
+    "tests/test_rpc_lifecycle.py": "553b7835d781c200ca59623b29d5df4eaeca3c3b8ac29b5b545b54c221645953",
+    "vendor/LICENSE": "3c4007918aa9889a47e12beb02f2501829853e731e793779205f2b53443345bc",
+    "vendor/gemm.cpp": "a08c98ddf9b9e5d45a53bbd4161561fb030fc7333bb7e2b0c0d0e86f4930ab33",
+    "vendor/lock.json": "e9c12bfbdd80de44839ccfe17c5cc719174f534953ba68650d33d9197dd47287"
+  }
+}

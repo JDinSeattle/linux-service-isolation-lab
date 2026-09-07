@@ -5,9 +5,16 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.14.7"]
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@751276eafca55f10f252026015f43c488f2322ba
+        with:
+          python-version: ${{ matrix.python }}
       - name: Verify archived evidence integrity
         run: make evidence-check
       - name: Reproduce evidence and regression tests
@@ -15,5 +22,5 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: validation-evidence
-          path: .runs/latest/
+          name: validation-evidence-python-${{ matrix.python }}
+          path: .runs/

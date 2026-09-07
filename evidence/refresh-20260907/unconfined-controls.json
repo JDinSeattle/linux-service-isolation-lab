@@ -1,0 +1,23 @@
+[
+  {
+    "probe": "read",
+    "unconfined": {
+      "errno": 0,
+      "rc": 0
+    }
+  },
+  {
+    "probe": "socket",
+    "unconfined": {
+      "errno": 0,
+      "rc": 3
+    }
+  },
+  {
+    "probe": "memory",
+    "unconfined": {
+      "errno": 0,
+      "rc": 0
+    }
+  }
+]

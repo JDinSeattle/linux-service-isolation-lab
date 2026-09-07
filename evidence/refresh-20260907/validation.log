@@ -1,0 +1,23 @@
+python3 -m unittest discover -s tests -v
+test_authorized (test_policy.PolicyTests.test_authorized) ... ok
+test_invalid_dimensions (test_policy.PolicyTests.test_invalid_dimensions) ... ok
+test_spoofed_uid_field_rejected (test_policy.PolicyTests.test_spoofed_uid_field_rejected) ... ok
+test_unknown_uid_and_operation (test_policy.PolicyTests.test_unknown_uid_and_operation) ... ok
+test_close_does_not_remove_replacement_path (test_rpc_lifecycle.RpcLifecycleTests.test_close_does_not_remove_replacement_path) ... ok
+test_disconnected_peer_does_not_kill_broker (test_rpc_lifecycle.RpcLifecycleTests.test_disconnected_peer_does_not_kill_broker) ... ok
+test_malformed_and_truncated_then_next_peer (test_rpc_lifecycle.RpcLifecycleTests.test_malformed_and_truncated_then_next_peer) ... ok
+test_slow_sender_cannot_reset_total_deadline (test_rpc_lifecycle.RpcLifecycleTests.test_slow_sender_cannot_reset_total_deadline) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.163s
+
+OK
+python3 scripts/validate.py --out .runs/latest
+{
+  "kernel": {
+    "landlock_abi": 8,
+    "arch": "x86_64"
+  },
+  "real_kernel_and_auth_cases": 17,
+  "all_expected_enforced": true
+}

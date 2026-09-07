@@ -1,4 +1,6 @@
-# Measured local results
+# Historical local baseline results
+
+Preserved baseline; current maintenance results are in [refresh-results-20260907.md](refresh-results-20260907.md).
 
 Execution date: 2026-09-07T21:44:24Z. 4 focused unit/regression tests passed, followed by the real integration campaign. See [validation log](../evidence/local/validation.log) and [manifest](../evidence/local/manifest.json).
 

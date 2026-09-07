@@ -1,0 +1,187 @@
+[
+  {
+    "case": "business_gemm",
+    "child_reaped": true,
+    "elapsed_ms": 1.794497002265416,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"protocol\":1,\"kernel_us\":[0.10000000000000001],\"values\":[1.546875]}\n"
+  },
+  {
+    "case": "read_allowed",
+    "child_reaped": true,
+    "elapsed_ms": 1.0085370013257489,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":0,\"errno\":0}\n"
+  },
+  {
+    "case": "write_allowed",
+    "child_reaped": true,
+    "elapsed_ms": 1.0604849958326668,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":0,\"errno\":0}\n"
+  },
+  {
+    "case": "read_outside",
+    "child_reaped": true,
+    "elapsed_ms": 0.9900309960357845,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":13}\n"
+  },
+  {
+    "case": "write_outside",
+    "child_reaped": true,
+    "elapsed_ms": 1.0401619947515428,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":13}\n"
+  },
+  {
+    "case": "symlink_escape",
+    "child_reaped": true,
+    "elapsed_ms": 1.1352889996487647,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":13}\n"
+  },
+  {
+    "case": "network",
+    "child_reaped": true,
+    "elapsed_ms": 1.003010998829268,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":1}\n"
+  },
+  {
+    "case": "process_creation",
+    "child_reaped": true,
+    "elapsed_ms": 1.0588750010356307,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":1}\n"
+  },
+  {
+    "case": "ptrace",
+    "child_reaped": true,
+    "elapsed_ms": 0.9567460074322298,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":1}\n"
+  },
+  {
+    "case": "memory",
+    "child_reaped": true,
+    "elapsed_ms": 0.9927820065058768,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":12}\n"
+  },
+  {
+    "case": "descriptors",
+    "child_reaped": true,
+    "elapsed_ms": 0.997826995444484,
+    "expected_enforced": true,
+    "returncode": 0,
+    "status": "completed",
+    "stderr": "",
+    "stdout": "{\"rc\":-1,\"errno\":24}\n"
+  },
+  {
+    "case": "file_capacity",
+    "child_reaped": true,
+    "elapsed_ms": 1.0502100049052387,
+    "expected_enforced": true,
+    "returncode": -25,
+    "status": "process_failure",
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "case": "cpu_budget",
+    "child_reaped": true,
+    "elapsed_ms": 999.5038439956261,
+    "expected_enforced": true,
+    "returncode": -24,
+    "status": "process_failure",
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "case": "wall_deadline",
+    "child_reaped": true,
+    "elapsed_ms": 201.1647159961285,
+    "expected_enforced": true,
+    "returncode": -9,
+    "status": "timeout",
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "case": "peer_auth_allowed",
+    "expected_enforced": true,
+    "response": {
+      "authorized": true,
+      "peer": {
+        "gid": 1000,
+        "pid": 1437290,
+        "uid": 1000
+      },
+      "result": {
+        "child_reaped": true,
+        "returncode": 0,
+        "status": "completed",
+        "stderr": "",
+        "stdout": "{\"protocol\":1,\"kernel_us\":[0.40699999999999997],\"values\":[1.546875]}\n"
+      }
+    }
+  },
+  {
+    "case": "peer_auth_wrong_operation",
+    "expected_enforced": true,
+    "response": {
+      "authorized": false,
+      "peer": {
+        "gid": 1000,
+        "pid": 1437290,
+        "uid": 1000
+      },
+      "reason": "operation not granted to kernel-authenticated UID"
+    }
+  },
+  {
+    "case": "peer_auth_uid_spoof",
+    "expected_enforced": true,
+    "response": {
+      "authorized": false,
+      "peer": {
+        "gid": 1000,
+        "pid": 1437290,
+        "uid": 1000
+      },
+      "reason": "request schema"
+    }
+  }
+]

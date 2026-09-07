@@ -6,3 +6,4 @@ verify: test
 	python3 scripts/validate.py --out .runs/latest
 evidence-check:
 	python3 evidence.py evidence/local
+	python3 evidence.py evidence/refresh-20260907
