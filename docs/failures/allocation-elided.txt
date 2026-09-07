@@ -1,0 +1,20 @@
+python3 -m unittest discover -s tests -v
+test_authorized (test_policy.PolicyTests.test_authorized) ... ok
+test_invalid_dimensions (test_policy.PolicyTests.test_invalid_dimensions) ... ok
+test_spoofed_uid_field_rejected (test_policy.PolicyTests.test_spoofed_uid_field_rejected) ... ok
+test_unknown_uid_and_operation (test_policy.PolicyTests.test_unknown_uid_and_operation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+python3 scripts/validate.py --out .runs/latest
+Traceback (most recent call last):
+  File "/home/postedism/Desktop/crosscutting-careers/E-linux-service-isolation-lab/scripts/validate.py", line 70, in <module>
+    if __name__=='__main__': main()
+                             ~~~~^^
+  File "/home/postedism/Desktop/crosscutting-careers/E-linux-service-isolation-lab/scripts/validate.py", line 42, in main
+    data=json.loads(r['stdout']); assert data['rc']==-1 and data['errno']==expected,r
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'status': 'completed', 'returncode': 0, 'stdout': '{"rc":0,"errno":0}\n', 'stderr': '', 'child_reaped': True, 'case': 'memory', 'elapsed_ms': 0.8993320079753175}
+make: *** [Makefile:6: verify] Error 1

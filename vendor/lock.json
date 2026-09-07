@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/JDinSeattle/qualification-regression-kit",
+  "path": "src/gemm.cpp",
+  "sha256": "a08c98ddf9b9e5d45a53bbd4161561fb030fc7333bb7e2b0c0d0e86f4930ab33",
+  "purpose": "vendored operator dependency from project A; HTTP service is implemented only in D"
+}

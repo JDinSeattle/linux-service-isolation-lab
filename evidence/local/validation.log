@@ -1,0 +1,19 @@
+python3 -m unittest discover -s tests -v
+test_authorized (test_policy.PolicyTests.test_authorized) ... ok
+test_invalid_dimensions (test_policy.PolicyTests.test_invalid_dimensions) ... ok
+test_spoofed_uid_field_rejected (test_policy.PolicyTests.test_spoofed_uid_field_rejected) ... ok
+test_unknown_uid_and_operation (test_policy.PolicyTests.test_unknown_uid_and_operation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+python3 scripts/validate.py --out .runs/latest
+{
+  "kernel": {
+    "landlock_abi": 8,
+    "arch": "x86_64"
+  },
+  "real_kernel_and_auth_cases": 17,
+  "all_expected_enforced": true
+}
